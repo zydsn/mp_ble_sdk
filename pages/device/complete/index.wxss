@@ -1,0 +1,33 @@
+.complete {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+  height: 100vh;
+}
+.complete .content {
+  padding-top: 212rpx;
+}
+.complete .content .icon {
+  width: 96rpx;
+  height: 96rpx;
+  margin: auto;
+}
+.complete .content .text {
+  font-size: 36rpx;
+  color: #FF6F8F;
+  text-align: center;
+  margin-top: 36rpx;
+}
+.complete .button {
+  width: 442rpx;
+  height: 80rpx;
+  background: #FF7486;
+  border-radius: 40rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  color: #fff;
+  margin-bottom: 80rpx;
+}

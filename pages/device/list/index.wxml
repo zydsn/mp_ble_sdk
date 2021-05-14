@@ -1,0 +1,20 @@
+<view class="list" wx:if="{{ devices && devices.length > 0 }}">
+  <view class="item" bindtap="selecter" data-item="{{ item }}" wx:for="{{ devices }}" wx:key="item">
+    <view class="left">
+      <image class="image" src="/static/images/pic.png" mode="widthFix"></image>
+    </view>
+    <view class="right">
+      <view class="name">孕橙智能蓝牙体温计</view>
+      <view class="mac">设备信息：{{ item.deviceId}}</view>
+      <view class="version">版本号：6.0</view>
+    </view>
+    <view class="icon">
+      <mp-icon type="field" icon="arrow" color="#ccc" size="{{ 20 }}"></mp-icon>
+    </view>
+  </view>
+</view>
+<view wx:else class="no_device">
+  暂未绑定蓝牙设备
+</view>
+
+<view class="button" bindtap="binding">绑定新设备</view>

@@ -1,0 +1,26 @@
+{
+  "entryPagePath": "pages/index/index",
+  "pages":[
+    "pages/index/index",
+    "pages/device/connection/index",
+    "pages/device/binding/index",
+    "pages/device/list/index",
+    "pages/device/detail/index",
+    "pages/device/complete/index"
+  ],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui": true
+  },
+  "plugins": {
+    "YC_BLE_SDK": {
+      "version": "1.0.0",
+      "provider": "wx901bf269d5a0089d"
+    }
+  },
+  "usingComponents": {
+    "mp-icon": "weui-miniprogram/icon/icon",
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
+  }
+}

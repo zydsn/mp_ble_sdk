@@ -1,0 +1,49 @@
+
+.binding .step {
+  height: 300rpx;
+  display: flex;
+  padding-right: 2rpx;
+}
+.binding .step .left {
+  padding-left: 18rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 202rpx;
+}
+.binding .step .left .icon {
+  width: 64rpx;
+  height: 64rpx;
+}
+.binding .step .right {
+  flex: 1;
+  height: 100%;
+  border-bottom: 4rpx #F0F0F0 solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 64rpx;
+}
+.binding .step .right .tips {
+  font-size: 28rpx;
+  color: #444444;
+  line-height: 40px
+}
+.binding .step .right .icon {
+  width: 86rpx;
+  height: 86rpx;
+}
+.loading {
+  animation-name: rotateAnim;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+@keyframes rotateAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

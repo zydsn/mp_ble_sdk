@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="button" type="primary" bindtap="jumpInput">
+    录入体温
+  </view>
+  <view hover-class="hover" data-url="/pages/device/list/index" class="button" type="primary" bindtap="jump">
+    设备管理
+  </view>
+</view>
+

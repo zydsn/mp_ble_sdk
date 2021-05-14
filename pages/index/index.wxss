@@ -1,0 +1,19 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .button {
+  margin-bottom: 50rpx;
+  width: 442rpx;
+  height: 80rpx;
+  background: #FF7486;
+  border-radius: 40rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  color: #fff;
+}

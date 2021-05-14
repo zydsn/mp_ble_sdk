@@ -1,0 +1,19 @@
+
+<view class="detail">
+  <view class="item">
+    <view class="left">
+      <image class="image" src="/static/images/pic.png" mode="widthFix"></image>
+    </view>
+    <view class="right">
+      <view class="name">孕橙智能蓝牙体温计</view>
+      <view class="mac">设备信息：{{ current.deviceId}}</view>
+      <view class="version">版本号：6.0</view>
+    </view>
+  </view>
+
+  <view class="button" bindtap="unbind">解绑设备</view>
+</view>
+
+<mp-dialog buttons="{{ buttons }}" show="{{ isDialogVisivle }}" title="温馨提示" bindbuttontap="tapDialogButton">
+  <text>您将接触与设备的绑定，是否真的解绑？</text>
+</mp-dialog>

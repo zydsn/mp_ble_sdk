@@ -1,0 +1,56 @@
+<view class="binding">
+  <view class="step">
+    <view class="left">
+      <view class="icon">
+        <image class="image" src="/static/images/icon_success.png" mode="widthFix" wx:if="{{ isOpen }}"></image>
+        <image class="image" src="/static/images/icon_grey.png" mode="widthFix" wx:else></image>
+      </view>
+    </view>
+    <view class="right">
+      <view class="tips">请打开手机蓝牙</view>
+      <view class="icon">
+        <image class="image" src="/static/images/icon_bluetooth.png" mode="widthFix" wx:if="{{ isOpen }}"></image>
+        <image class="image" src="/static/images/icon_bluetooth_close.png" mode="widthFix" wx:else></image>
+      </view>
+    </view>
+  </view>
+  <view class="step">
+    <view class="left">
+      <view class="icon">
+        <image class="image" src="/static/images/icon_grey.png" mode="widthFix" wx:if="{{ !isOpen }}"></image>
+        <image class="image loading" src="/static/images/icon_loading.png" mode="widthFix" wx:elif="{{ isNothing }}"></image>
+        <image class="image" src="/static/images/icon_success.png" mode="widthFix" wx:else></image>
+      </view>
+    </view>
+    <view class="right">
+      <view class="tips">按下开关键</view>
+      <view class="icon">
+        <image class="image" src="/static/images/icon_thermometer_close.png" mode="widthFix" wx:if="{{ isNothing }}"></image>
+        <image class="image" src="/static/images/icon_thermometer.png" mode="widthFix" wx:else></image>
+      </view>
+    </view>
+  </view>
+  <view class="step">
+    <view class="left">
+      <view class="icon">
+        <image class="image" src="/static/images/icon_grey.png" mode="widthFix" wx:if="{{ !isConnect }}"></image>
+        <image class="image" src="/static/images/icon_success.png" mode="widthFix" wx:else></image>
+      </view>
+    </view>
+    <view class="right">
+      <view class="tips">设备程序版本校验</view>
+      <view class="icon">
+        <image class="image" src="/static/images/icon_search_close.png" mode="widthFix" wx:if="{{ !isConnect }}"></image>
+        <image class="image" src="/static/images/icon_search.png" mode="widthFix" wx:else></image>
+      </view>
+    </view>
+  </view>
+
+  <mp-dialog buttons="{{ buttons }}" show="{{ isOpenBluetooth }}" title="温馨提示" bindbuttontap="tapBluetoothDialog">
+    <text>打开蓝牙，允许“孕橙”链接设备。</text>
+    <text>然后重新进入小程序</text>
+  </mp-dialog>
+  <mp-dialog buttons="{{ buttons }}" show="{{ isBindDevice }}" title="温馨提示" bindbuttontap="tapBindDialog">
+    <text>您已绑定该设备，无需再次绑定！</text>
+  </mp-dialog>
+</view>

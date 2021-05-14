@@ -1,0 +1,52 @@
+
+.item {
+  height: 160rpx;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  padding: 20rpx 0;
+  width: 100%;
+}
+.item .left {
+  width: 100rpx;
+  padding: 0 20rpx;
+}
+.item .name {
+  color: #FF7486;
+  font-size: 36rpx;
+  line-height: 36rpx;
+}
+.item .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.item .mac {
+  font-size: 28rpx;
+  color: #666;
+}
+.item .version {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.detail {
+  border-top: 1rpx solid #ccc;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 80rpx;
+  box-sizing: border-box;
+  align-items: center;
+}
+.detail .button {
+  width: 300rpx;
+  height: 70rpx;
+  background: #FF7486;
+  border-radius: 40rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 36rpx;
+  color: #fff;
+}

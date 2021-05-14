@@ -1,0 +1,9 @@
+<view class="complete">
+  <viiew class="content">
+    <view class="icon">
+      <image class="image" src="/static/images/icon_bind_success.png"></image>
+    </view>
+    <view class="text">绑定成功</view>
+  </viiew>
+  <view class="button" bindtap="back">完成</view>
+</view>

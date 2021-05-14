@@ -1,0 +1,65 @@
+<view class="connection">
+  <view class="upper">
+    <view class="state" wx:if="{{ isDisconnect }}">
+      <image class="image" src="/static/images/content_img_connection1@2x.png" mode="widthFix"></image>
+      <view class="result">连接设备已断开</view>
+    </view>
+    <view class="state" wx:elif="{{ timeout }}">
+      <image class="image" src="/static/images/content_img_connection1@2x.png" mode="widthFix"></image>
+      <view class="result">连接设备已断开</view>
+    </view>
+    <view class="state" wx:elif="{{ isConnect }}">
+      <image class="image" src="/static/images/content_img_connection2@2x.png" mode="widthFix"></image>
+      <view class="result">体温计已连接</view>
+    </view>
+    <view class="state" wx:elif="{{ isOpen }}">
+      <image class="image loading" src="/static/images/content_img_connection@2x.png" mode="widthFix"></image>
+      <view class="result">设备连接中</view>
+    </view>
+    <view class="step">
+      <view class="icon">
+        <image class="image" src="/static/images/icon_success_mini.png" mode="widthFix" wx:if="{{ isOpen }}"></image>
+        <image class="image" src="/static/images/icon_grey_mini.png" mode="widthFix" wx:else></image>
+      </view>
+      <view class="text">手机蓝牙已打开</view>
+    </view>
+    <view class="step">
+      <view class="icon">
+        <image class="image" src="/static/images/icon_success_mini.png" mode="widthFix" wx:if="{{ isConnect }}"></image>
+        <image class="image" src="/static/images/icon_grey_mini.png" mode="widthFix" wx:else></image>
+      </view>
+      <view class="text">孕橙体温计开关已链接</view>
+    </view>
+    <view class="step"></view>
+  </view>
+  <view class="button" bindtap="restart" wx:if="{{ isDisconnect }}">重新连接</view>
+  <view class="button" wx:elif="{{ fail }}" bindtap="restart">重新搜索</view>
+  <view class="button" wx:elif="{{ isConnect }}" bindtap="back">返回</view>
+  <view class="button" wx:else bindtap="back">取消</view>
+</view>
+
+<!-- <mp-dialog buttons="{{ [ { text: '好' } ] }}" show="{{ isOpenBluetooth }}" title="温馨提示" bindbuttontap="tapBluetoothDialog">
+  <text>打开蓝牙，允许“孕橙”链接设备。</text>
+  <text>然后重新搜索</text>
+</mp-dialog> -->
+
+<mp-dialog buttons="{{ [ { text: '确定' } ] }}" show="{{ uploadEnd && (historyList.length || list.temperature) }}" title="温度传输成功" bindbuttontap="tapUploadEnd">
+  <view class="dialog">
+    <view class="title" wx:if="{{ historyList.length }}">历史数据</view>
+    <view class="item" wx:for="{{ historyList }}" wx:key="index">
+      <view class="date">{{ item.date }}</view>
+      <view class="time_and_temperature">
+        <view class="time">{{ item.time }}</view>
+        <view class="temperature">{{ item.temperature }}</view>
+      </view>
+    </view>
+    <view class="title" wx:if="{{ list.temperature }}">当次上传</view>
+    <view class="item">
+      <view class="date">{{ list.date }}</view>
+      <view class="time_and_temperature">
+        <view class="time">{{ list.time }}</view>
+        <view class="temperature">{{ list.temperature }}</view>
+      </view>
+    </view>
+  </view>
+</mp-dialog>

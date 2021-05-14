@@ -1,0 +1,93 @@
+.connection {
+  height: 100vh;
+  padding: 140rpx 0 80rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.connection .upper .state {
+  width: 528rpx;
+  height: 528rpx;
+  position: relative;
+} 
+.connection .upper .state .result {
+  top: 0;
+  left: 0;
+  color: #444444;
+  font-size: 36rpx;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 528rpx;
+}
+.connection .step {
+  width: 362rpx;
+  display: flex;
+  margin: 56rpx auto 0;
+} 
+.connection .step:nth-child(3) {
+  margin: 14rpx auto 0;
+}
+.connection .step .icon {
+  width: 44rpx;
+  height: 44rpx;
+}
+.connection .step .text {
+  margin-left: 38rpx;
+  color: #B2B2B2;
+  font-size: 28rpx;
+  line-height: 44rpx;
+}
+.connection .step .text.active {
+  color: #444444;
+}
+.connection .button {
+  width: 442rpx;
+  height: 80rpx;
+  background: #FF7486;
+  border-radius: 40rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  color: #fff;
+}
+.loading {
+  animation-name: rotateAnim;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+}
+@keyframes rotateAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dialog {
+  padding: 30rpx 80rpx 30rpx 60rpx;
+}
+.dialog .item {
+  padding-bottom: 30rpx;
+  line-height: 1;
+  font-size: 28rpx;
+  text-align: left;
+}
+.dialog .item .date {
+  color: #444444;
+}
+.time_and_temperature {
+  margin-top: 42rpx;
+  margin-left: 32rpx;
+  color: #B2B2B2;
+  display: flex;
+  justify-content: space-between;
+}
+.time_and_temperature .temperature {
+  color: #444444;
+}
